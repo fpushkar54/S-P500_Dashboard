@@ -27,7 +27,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-The app opens at <http://localhost:8501>.
+The app opens at <https://sandpdashboard54.streamlit.app>.
 
 On first launch the cache is empty and you'll see a download prompt. Pick a
 universe size in the sidebar first — **Top 50** finishes in under a minute and
