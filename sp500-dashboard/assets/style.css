@@ -368,11 +368,19 @@ html, body, [class*="css"] {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
-/* Round the edges of Plotly chart containers */
-[data-testid="stPlotlyChart"],
+/* Elevate white chart cards with border, shadow, and breathing room */
+[data-testid="stPlotlyChart"] {
+  background-color: #FAFAFA !important;
+  border: 1px solid #C8D6CE !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38) !important;
+  padding: 6px !important;
+  overflow: hidden !important;
+}
+
 [data-testid="stPlotlyChart"] > div,
 .js-plotly-plot .plot-container .svg-container {
-  border-radius: var(--radius) !important;
+  border-radius: 8px !important;
   overflow: hidden !important;
 }
 /* Floating pill tabs — remove bottom track line and highlight bar */
