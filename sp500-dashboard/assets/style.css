@@ -375,3 +375,15 @@ html, body, [class*="css"] {
   border-radius: var(--radius) !important;
   overflow: hidden !important;
 }
+/* Add horizontal padding and rounded top corners to Streamlit tab buttons */
+.stTabs [data-baseweb="tab"] {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+  border-top-left-radius: var(--radius-sm) !important;
+  border-top-right-radius: var(--radius-sm) !important;
+}
+
+/* Override the red Streamlit active tab underline with palette green */
+.stTabs [data-baseweb="tab-highlight"] {
+  background-color: var(--accent) !important;
+}
