@@ -6,32 +6,31 @@
    ========================================================================== */
 
 :root {
-  /* Base: a single deep navy, stepped up in lightness for structure. */
-  --ground:        #011133;
-  --panel:         #041A45;
-  --panel-raised:  #072253;
-  --line:          #0E2F63;
-  --line-strong:   #1A4483;
+  /* Base: dark forest green ground, charcoal panels & subtle neutral borders */
+  --ground:           #162B21;
+  --panel:            #111111;
+  --panel-raised:     #1A1A1A;
+  --line:             #263B30;
+  --line-strong:      #365243;
 
-  /* Type: pale blue-white for reading, signal green for data. */
-  --text:          #DCE6F7;
-  --text-muted:    #8FA5C8;
-  --text-faint:    #7A92C2;
+  /* Type: crisp off-white for reading */
+  --text:             #FAFAFA;
+  --text-muted:       #B8C4BE;
+  --text-faint:       #7D8F86;
 
-  --accent:        #70D603;
-  --accent-soft:   rgba(112, 214, 3, 0.14);
+  /* Accent: palette green (#67B864 -> rgb 103, 184, 100) */
+  --accent:           #67B864;
+  --accent-soft:      rgba(103, 184, 100, 0.16);
 
-  /* Direction. Green doubles as the brand and as "up" — they agree.
-     Down needs its own red, and warnings need amber so a caution never
-     reads as good news. */
-  --up:            #70D603;
-  --up-soft:       rgba(112, 214, 3, 0.14);
-  --down:          #FF4B5C;
-  --down-soft:     rgba(255, 75, 92, 0.14);
-  --neutral:       #5B8FD9;
-  --neutral-soft:  rgba(91, 143, 217, 0.14);
-  --warning:       #FFB020;
-  --warning-soft:  rgba(255, 176, 32, 0.13);
+  /* Direction: green for up/accent, keep red/amber distinct for market signals */
+  --up:               #67B864;
+  --up-soft:          rgba(103, 184, 100, 0.16);
+  --down:             #FF4B5C;
+  --down-soft:        rgba(255, 75, 92, 0.14);
+  --neutral:          #9EB3A8;
+  --neutral-soft:     rgba(158, 179, 168, 0.14);
+  --warning:          #FFB020;
+  --warning-soft:     rgba(255, 176, 32, 0.13);
 
   --radius:        10px;
   --radius-sm:     6px;
