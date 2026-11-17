@@ -17,7 +17,7 @@ import streamlit as st
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSS_PATH = os.path.join(PROJECT_ROOT, "assets", "style.css")
 
-PLOTLY_TEMPLATE = "plotly_dark"
+PLOTLY_TEMPLATE = "plotly_white"
 # Single source of truth for chart colour. These mirror the CSS custom
 # properties in assets/style.css — change both together.
 CHART_COLORS = {
