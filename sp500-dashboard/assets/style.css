@@ -368,3 +368,10 @@ html, body, [class*="css"] {
   font-weight: 600;
   letter-spacing: 0.01em;
 }
+/* Round the edges of Plotly chart containers */
+[data-testid="stPlotlyChart"],
+[data-testid="stPlotlyChart"] > div,
+.js-plotly-plot .plot-container .svg-container {
+  border-radius: var(--radius) !important;
+  overflow: hidden !important;
+}
