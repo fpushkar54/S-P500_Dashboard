@@ -21,23 +21,23 @@ PLOTLY_TEMPLATE = "plotly_dark"
 # Single source of truth for chart colour. These mirror the CSS custom
 # properties in assets/style.css — change both together.
 CHART_COLORS = {
-    "accent": "#70D603",
-    "up": "#70D603",
+    "accent": "#67B864",
+    "up": "#67B864",
     "down": "#FF4B5C",
-    "neutral": "#5B8FD9",
+    "neutral": "#9EB3A8",
     "warning": "#FFB020",
-    "line": "#0E2F63",
-    "text": "#DCE6F7",
-    "muted": "#8FA5C8",
-    "ground": "#011133",
-    "panel": "#041A45",
-    "panel_raised": "#072253",
+    "line": "#263B30",
+    "text": "#FAFAFA",
+    "muted": "#B8C4BE",
+    "ground": "#162B21",
+    "panel": "#111111",
+    "panel_raised": "#1A1A1A",
 }
 
-# Eleven hues for eleven GICS sectors, all legible on the navy ground and
+# Eleven hues for eleven GICS sectors, all legible on the forest/charcoal ground and
 # ordered so neighbouring slices never sit at the same lightness.
 SECTOR_PALETTE = [
-    "#70D603",
+    "#67B864",
     "#4FA8F5",
     "#FFB020",
     "#D96BE0",
@@ -45,16 +45,16 @@ SECTOR_PALETTE = [
     "#FF4B5C",
     "#A9C23F",
     "#FF8A4C",
-    "#7F9DC7",
+    "#9EB3A8",
     "#9B7BFF",
     "#56D9F0",
 ]
 
-# Sequential ramp for the treemap: ground navy through to the accent.
-SEQUENTIAL_SCALE = ["#041A45", "#0F4A52", "#2E8A2E", "#70D603"]
+# Sequential ramp for the treemap: charcoal panel through forest green to the accent.
+SEQUENTIAL_SCALE = ["#111111", "#1E3D2F", "#3F7D4C", "#67B864"]
 
 # The recessive fill used for "everything else" slices.
-MUTED_FILL = "#0B2A57"
+MUTED_FILL = "#1D3328"
 
 
 def with_alpha(color: str, alpha: float) -> str:
