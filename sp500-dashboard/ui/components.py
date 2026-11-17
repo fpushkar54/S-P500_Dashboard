@@ -373,11 +373,16 @@ def style_figure(figure, height: int = 420, legend_top: bool = True):
     figure.update_layout(
         template=PLOTLY_TEMPLATE,
         height=height,
-        margin=dict(l=16, r=16, t=44, b=16),
+        margin=dict(l=28, r=36, t=48, b=24),
         paper_bgcolor="#FAFAFA",
         plot_bgcolor="#FAFAFA",
         font=dict(color="#111111", size=12),
         hovermode="x unified",
+        hoverlabel=dict(
+            bgcolor="#111111",
+            bordercolor="#67B864",
+            font=dict(color="#FAFAFA", size=12),
+        ),
     )
     if legend_top:
         figure.update_layout(
@@ -388,19 +393,24 @@ def style_figure(figure, height: int = 420, legend_top: bool = True):
                 xanchor="left",
                 x=0,
                 title_text="",
-                font=dict(color="#111111"),
+                font=dict(color="#111111", size=12),
             )
         )
     figure.update_xaxes(
-        gridcolor="#E2E8E5",
-        zerolinecolor="#C5D1CB",
+        gridcolor="#E6ECE8",
+        zeroline=True,
+        zerolinecolor="#111111",
+        zerolinewidth=1.5,
         tickfont=dict(color="#111111"),
         title_font=dict(color="#111111"),
+        automargin=True,
     )
     figure.update_yaxes(
-        gridcolor="#E2E8E5",
+        gridcolor="#E6ECE8",
+        zeroline=True,
         zerolinecolor="#C5D1CB",
         tickfont=dict(color="#111111"),
         title_font=dict(color="#111111"),
+        automargin=True,
     )
     return figure
