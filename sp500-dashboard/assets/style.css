@@ -375,15 +375,27 @@ html, body, [class*="css"] {
   border-radius: var(--radius) !important;
   overflow: hidden !important;
 }
-/* Add horizontal padding and rounded top corners to Streamlit tab buttons */
-.stTabs [data-baseweb="tab"] {
-  padding-left: 16px !important;
-  padding-right: 16px !important;
-  border-top-left-radius: var(--radius-sm) !important;
-  border-top-right-radius: var(--radius-sm) !important;
+/* Floating pill tabs — remove bottom track line and highlight bar */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 8px !important;
+  border-bottom: none !important;
 }
 
-/* Override the red Streamlit active tab underline with palette green */
+.stTabs [data-baseweb="tab-border"],
 .stTabs [data-baseweb="tab-highlight"] {
-  background-color: var(--accent) !important;
+  display: none !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+  padding: 8px 16px !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid transparent !important;
+  background-color: transparent !important;
+  transition: all 0.15s ease !important;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+  background-color: var(--panel) !important;
+  border-color: var(--line-strong) !important;
+  color: var(--accent) !important;
 }
