@@ -24,12 +24,12 @@ CHART_COLORS = {
     "accent": "#67B864",
     "up": "#67B864",
     "down": "#FF4B5C",
-    "neutral": "#9EB3A8",
+    "neutral": "#2F453B",
     "warning": "#FFB020",
-    "line": "#263B30",
-    "text": "#FAFAFA",
-    "muted": "#B8C4BE",
-    "ground": "#162B21",
+    "line": "#E2E8E5",
+    "text": "#111111",
+    "muted": "#52635B",
+    "ground": "#FAFAFA",
     "panel": "#111111",
     "panel_raised": "#1A1A1A",
 }
@@ -369,14 +369,14 @@ def empty_state(message: str, hint: str = "") -> None:
 
 
 def style_figure(figure, height: int = 420, legend_top: bool = True):
-    """Apply the shared dark styling to any Plotly figure."""
+    """Apply the shared light styling to any Plotly figure."""
     figure.update_layout(
         template=PLOTLY_TEMPLATE,
         height=height,
-        margin=dict(l=10, r=10, t=40, b=10),
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(color=CHART_COLORS["text"], size=12),
+        margin=dict(l=16, r=16, t=44, b=16),
+        paper_bgcolor="#FAFAFA",
+        plot_bgcolor="#FAFAFA",
+        font=dict(color="#111111", size=12),
         hovermode="x unified",
     )
     if legend_top:
@@ -388,8 +388,19 @@ def style_figure(figure, height: int = 420, legend_top: bool = True):
                 xanchor="left",
                 x=0,
                 title_text="",
+                font=dict(color="#111111"),
             )
         )
-    figure.update_xaxes(gridcolor=CHART_COLORS["line"], zerolinecolor=CHART_COLORS["line"])
-    figure.update_yaxes(gridcolor=CHART_COLORS["line"], zerolinecolor=CHART_COLORS["line"])
+    figure.update_xaxes(
+        gridcolor="#E2E8E5",
+        zerolinecolor="#C5D1CB",
+        tickfont=dict(color="#111111"),
+        title_font=dict(color="#111111"),
+    )
+    figure.update_yaxes(
+        gridcolor="#E2E8E5",
+        zerolinecolor="#C5D1CB",
+        tickfont=dict(color="#111111"),
+        title_font=dict(color="#111111"),
+    )
     return figure
